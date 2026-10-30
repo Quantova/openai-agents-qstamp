@@ -1,0 +1,47 @@
+{
+  "name": "@quantovainc/openai-agents-qstamp",
+  "version": "0.1.0",
+  "description": "Post quantum on chain provenance for OpenAI Agents traces. A tracing processor that writes a tamper evident Qstamp anchor for every agent span and keeps the span data private.",
+  "license": "Apache-2.0 OR MIT",
+  "author": "Quantova Inc <Quantovaorg@gmail.com>",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "tsc -p tsconfig.json",
+    "pretest": "tsc -p tsconfig.json",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "openai",
+    "agents",
+    "tracing",
+    "provenance",
+    "post-quantum",
+    "qstamp",
+    "attestation",
+    "audit"
+  ],
+  "peerDependencies": {
+    "@openai/agents": ">=0.1.0",
+    "@quantovainc/qstamp": ">=0.6.0"
+  },
+  "peerDependenciesMeta": {
+    "@openai/agents": {
+      "optional": true
+    }
+  }
+}
